@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/estilos5.css">
+    <title>Control de ingreso a laboratorios</title>
+</head>
+<body>
+  <div class="tarjeta">
+    <div class="fecha">Jueves 15 de Noviembre de 2012</div>
+
+    <header>Sistema de Control de Ingreso a laboratorios de Electromecanica</header>
+
+    <main>
+      <p class="bienvenida">Bienvenido(a):</p>
+      <p class="nombre">Daniel Gomez Tellez</p>
+
+      <p class="instrucciones">Te solicitamos seleccionar la materia, laboratorio y grupo, al concluir pulsa el boton enviar.</p>
+
+      <form>
+        <div class="campo">
+          <label for="carrera">Carrera:</label>
+          <select id="carrera" name="carrera">
+            <option>Electromecanica</option>
+          </select>
+        </div>
+
+        <div class="campo">
+          <label for="materia">Materias:</label>
+          <select id="materia" name="materia">
+            <option>Electrónica I</option>
+          </select>
+        </div>
+
+        <div class="campo">
+          <label for="laboratorio">Laboratorio:</label>
+          <select id="laboratorio" name="laboratorio">
+            <option>Electrónica</option>
+          </select>
+        </div>
+
+        <div class="campo">
+          <label for="grupo">Grupo:</label>
+          <select id="grupo" name="grupo">
+            <option>ab</option>
+          </select>
+        </div>
+
+        <button type="submit">Enviar consulta</button>
+      </form>
+    </main>
+  </div>
+  <footer></footer>
+</body>
+</html>

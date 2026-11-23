@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    background-color: #f8d7e5;
+    color: #21262b;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+}
+
+.cuaderno {
+    width: 100%;
+    max-width: 600px;
+}
+
+header h1 {
+    font-size: 32px;
+    margin: 0 0 6px 0;
+}
+
+header p {
+    margin: 0 0 30px 0;
+    color: #5a5c54;
+    font-size: 15px;
+}
+
+.paginas {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid #ddd6c1;
+}
+
+.paginas li {
+    border-bottom: 1px solid #ddd6c1;
+    border-left: 5px solid transparent;
+    padding: 16px 14px;
+}
+
+.paginas a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.paginas a:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+.paginas h2 {
+    font-size: 18px;
+    margin: 0 0 3px 0;
+}
+
+.paginas p {
+    margin: 0;
+    font-size: 14px;
+    color: #5a5c54;
+}
+
+.clip { border-left-color: #ffd700; }
+.clip h2 { color: #ffd700; }
+
+.gas { border-left-color: #800080; }
+.gas h2 { color: #800080; }
+
+.huevo { border-left-color: #87cefa; }
+.huevo h2 { color: #87cefa; }
+
+.peligroso { border-left-color: #ff8c00; }
+.peligroso h2 { color: #ff8c00; }
+
+.lab { border-left-color: #ff0000; }
+.lab h2 { color: #ff0000; }

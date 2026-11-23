@@ -1,0 +1,76 @@
+body{
+    font-family: 'Arial', 'Tahoma';
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+}
+.container{
+    width: 85%;
+    max-width: 940px;
+    margin: 0 auto;
+    text-align: justify;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+.header{
+    background: #4b3621;
+    padding: 1.5rem;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.logo img{
+    width: 90px;
+    height: auto;
+}
+.logo{
+    letter-spacing: 3px;
+    font-size: 2rem;
+
+    
+}
+
+.header a{
+    color: #ffffff;
+    text-decoration: none;
+}
+.navigate a{
+    border-radius: 0.2rem;
+    transition: all 0.6s linear;
+
+}
+.navigate a:hover{
+    background: #f1e203;
+}
+.logo-nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main{
+    padding-top: 8rem;
+}
+.footer{
+     background: #4b3621;
+      color: #ffffff;
+      padding: 2rem 1rem;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; 
+}
+
+
+.logo {
+  font-family: "Rubik Wet Paint", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+

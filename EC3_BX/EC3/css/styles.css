@@ -1,0 +1,48 @@
+body {
+  background: #d9d9d9;
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+}
+
+.contenedor-form {
+  max-width: 560px;
+  background: #e4e4e4;
+  padding: 1.5rem 1.75rem 1rem;
+  margin: 1.5rem auto;
+}
+
+.titulo {
+  font-size: 2.2rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.campo {
+  background: #f8eeee;
+  border: 2px solid transparent;
+}
+
+.campo:focus {
+  background: #fff6f6;
+  border-color: #212529;
+  box-shadow: none;
+}
+
+/* Borde rojo cuando falla la validación */
+.campo.invalido,
+.genero.invalido {
+  border: 2px solid #dc3545;
+}
+
+.genero.invalido {
+  outline: 2px solid #dc3545;
+}
+
+.boton-enviar {
+  padding: .75rem;
+}
+
+.pie {
+  margin-top: 1.5rem;
+  color: #555;
+  font-size: .9rem;
+}

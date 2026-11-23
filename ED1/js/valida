@@ -1,0 +1,66 @@
+function aMayusculas(elemento) {
+    elemento.value = elemento.value.toUpperCase();
+}
+
+function mostrarError(mensaje, elemento) {
+    const alertBox = document.getElementById("mensajeAlert");
+    if (alertBox) {
+        alertBox.innerText = mensaje;
+        alertBox.classList.remove("d-none");
+    }
+    if (elemento) {
+        elemento.classList.add("border-danger");
+        elemento.focus();
+    }
+}
+
+function limpiarErrores() {
+    const alertBox = document.getElementById("mensajeAlert");
+    if (alertBox) {
+        alertBox.classList.add("d-none");
+        alertBox.innerText = "";
+    }
+    const inputs = document.querySelectorAll(".form-control, .form-select");
+    inputs.forEach(input => input.classList.remove("border-danger"));
+}
+
+function validarTecnologia() {
+    limpiarErrores();
+
+    var expreNom = /^[a-zA-ZÁ-ý\s]{1,40}$/;
+    var expreEmail = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
+    var expreTel = /^\d{7,14}$/;
+
+    var nombre = document.getElementById("nombre");
+    var correo = document.getElementById("correo");
+    var telefono = document.getElementById("telefono");
+    var area = document.getElementById("area");
+
+    // 1. Validar Nombre
+    if (!expreNom.test(nombre.value.trim())) {
+        mostrarError("Por favor, ingrese un nombre válido (solo letras, máximo 40 caracteres).", nombre);
+        return false;
+    }
+
+    // 2. Validar Correo
+    if (!expreEmail.test(correo.value.trim())) {
+        mostrarError("Por favor, ingrese un correo electrónico válido.", correo);
+        return false;
+    }
+
+    // 3. Validar Teléfono
+    if (!expreTel.test(telefono.value.trim())) {
+        mostrarError("Por favor, ingrese un teléfono válido (solo números, entre 7 y 14 dígitos).", telefono);
+        return false;
+    }
+
+    // 4. Validar Selección de Área
+    if (area.value === "") {
+        mostrarError("Por favor, seleccione un área de interés.", area);
+        return false;
+    }
+
+    // Envío del formulario al PHP
+    document.getElementById("frmTecno").submit();
+    return true;
+}

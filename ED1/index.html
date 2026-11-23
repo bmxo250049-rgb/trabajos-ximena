@@ -1,0 +1,287 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Digital World | Tecnología</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/valida.js" defer></script>
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="header">
+        <div class="container header-container">
+
+            <div class="logo-svg">
+                <svg width="45" height="45" viewBox="0 0 24 24"
+                    fill="none" stroke="#7952b3" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+
+                    <circle cx="12" cy="12" r="3"></circle>
+                    <path d="M12 2v3"></path>
+                    <path d="M12 19v3"></path>
+                    <path d="M2 12h3"></path>
+                    <path d="M19 12h3"></path>
+                    <path d="M4.93 4.93l2.12 2.12"></path>
+                    <path d="M16.95 16.95l2.12 2.12"></path>
+                    <path d="M4.93 19.07l2.12-2.12"></path>
+                    <path d="M16.95 7.05l2.12-2.12"></path>
+
+                </svg>
+
+                <span class="logo-texto">Digital World</span>
+            </div>
+
+            <nav class="nav-links">
+                <a href="#articulos">Tecnología</a>
+                <a href="#registro">Inscripción</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main container">
+
+        <section class="text-center my-4">
+
+            <h1 class="titulo-principal">
+                Innovación en la Era Digital
+            </h1>
+
+            <p class="subtitulo">
+                Conoce las herramientas y tendencias que están
+                transformando nuestra forma de vivir y trabajar.
+            </p>
+
+        </section>
+
+
+        <!-- PATRÓN DE DISEÑO: CARD GRID -->
+
+        <section id="articulos" class="row g-4 mb-5">
+
+            <div class="col-md-6">
+                <div class="card card-custom h-100 p-4">
+
+                    <h3>1. Internet de las Cosas</h3>
+
+                    <p>
+                        El Internet de las Cosas permite conectar
+                        diferentes objetos cotidianos a internet
+                        para intercambiar información y realizar
+                        actividades automáticamente. Algunos
+                        ejemplos son los relojes inteligentes,
+                        electrodomésticos y sistemas de iluminación
+                        que pueden controlarse desde un teléfono.
+                    </p>
+
+                </div>
+            </div>
+
+
+            <div class="col-md-6">
+                <div class="card card-custom h-100 p-4">
+
+                    <h3>2. Realidad Virtual y Aumentada</h3>
+
+                    <p>
+                        La realidad virtual y la realidad aumentada
+                        ofrecen nuevas maneras de interactuar con
+                        los entornos digitales. Estas tecnologías
+                        se utilizan en videojuegos, educación,
+                        medicina y capacitación profesional,
+                        permitiendo crear experiencias interactivas
+                        que combinan elementos reales y virtuales.
+                    </p>
+
+                </div>
+            </div>
+
+
+            <div class="col-md-6">
+                <div class="card card-custom h-100 p-4">
+
+                    <h3>3. Robótica y Sistemas Inteligentes</h3>
+
+                    <p>
+                        La robótica combina conocimientos de
+                        programación, electrónica y mecánica
+                        para desarrollar máquinas capaces de
+                        realizar distintas actividades. Actualmente
+                        se utiliza en fábricas, hospitales y
+                        centros de investigación para mejorar
+                        los procesos y facilitar tareas que
+                        requieren precisión.
+                    </p>
+
+                </div>
+            </div>
+
+
+            <div class="col-md-6">
+                <div class="card card-custom h-100 p-4">
+
+                    <h3>4. Redes y Conectividad Digital</h3>
+
+                    <p>
+                        Las redes informáticas hacen posible
+                        la comunicación entre dispositivos y
+                        el intercambio de información a nivel
+                        mundial. Gracias a tecnologías como
+                        Wi-Fi, fibra óptica y redes móviles,
+                        las personas pueden acceder a servicios
+                        digitales, compartir archivos y
+                        comunicarse desde diferentes lugares.
+                    </p>
+
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- FORMULARIO -->
+
+        <section id="registro" class="form-section mx-auto">
+
+            <h2 class="text-center mb-3">
+                Registro de Participantes
+            </h2>
+
+            <p class="subtitulo text-center">
+                Completa tus datos para formar parte de nuestra comunidad digital.
+            </p>
+
+            <div id="mensajeAlert"
+                class="alert alert-danger d-none my-3"
+                role="alert">
+            </div>
+
+
+            <form action="procesa.php"
+                method="post"
+                name="frmTecno"
+                id="frmTecno"
+                class="formulario-tecno"
+                onsubmit="return false;">
+
+                <div class="mb-3">
+
+                    <label for="nombre" class="form-label">
+                        Nombre del participante:
+                    </label>
+
+                    <input type="text"
+                        id="nombre"
+                        name="nombre"
+                        class="form-control"
+                        placeholder="Escribe tu nombre completo"
+                        oninput="aMayusculas(this)">
+
+                </div>
+
+
+                <div class="mb-3">
+
+                    <label for="correo" class="form-label">
+                        Dirección de correo:
+                    </label>
+
+                    <input type="text"
+                        id="correo"
+                        name="correo"
+                        class="form-control"
+                        placeholder="ejemplo@correo.com">
+
+                </div>
+
+
+                <div class="mb-3">
+
+                    <label for="telefono" class="form-label">
+                        Número de contacto:
+                    </label>
+
+                    <input type="text"
+                        id="telefono"
+                        name="telefono"
+                        class="form-control"
+                        placeholder="Ingresa tu número telefónico">
+
+                </div>
+
+
+                <div class="mb-3">
+
+                    <label for="area" class="form-label">
+                        Tema tecnológico de interés:
+                    </label>
+
+                    <select id="area"
+                        name="area"
+                        class="form-select">
+
+                        <option value="">
+                            Selecciona una opción...
+                        </option>
+
+                        <option value="IoT">
+                            Internet de las Cosas
+                        </option>
+
+                        <option value="Realidad">
+                            Realidad Virtual y Aumentada
+                        </option>
+
+                        <option value="Robotica">
+                            Robótica y Automatización
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <button type="button"
+                    class="btn btn-tech w-100 fw-bold"
+                    onclick="validarTecnologia()">
+
+                    Registrar Participante
+
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <!-- PIE DE PÁGINA -->
+
+    <footer class="footer mt-5">
+
+        <p>
+            BARAJAS MARTINEZ XIMENA
+        </p>
+
+
+    </footer>
+
+</body>
+</html>

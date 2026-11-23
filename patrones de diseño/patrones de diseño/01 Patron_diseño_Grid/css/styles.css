@@ -1,0 +1,50 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*:before,*after {
+    box-sizing: inherit;
+}
+body {
+    font-family: 'Trebuchet MS', 'sans-serif';
+    font-size: 1.6rem; /* 16px */
+
+}
+img{
+    max-width: 100%;
+}
+h1{
+    font-size: 4.0rem;/* 40px */
+}
+.contenedor{
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+}
+.entrada_blog a{
+    display:inline-block;
+    background: blue;
+    color:azure;
+    padding: 10px 20px;
+    border-radius: 1.2rem;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.dos-columnas{
+    display: block;
+}
+/*responsive*/
+@media(min-width: 768px){
+    .dos-columnas{
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 2rem;
+    }
+    body{
+        background-color: rgb(255, 0, 0);
+    }
+}
+
